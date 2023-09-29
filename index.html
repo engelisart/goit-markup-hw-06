@@ -24,12 +24,22 @@
   </head>
   <body>
     <!--Header styles-->
+    
     <header class="header">
       <div class="header-container container">
         <nav class="header-nav">
           <a class="logo link" href="./index.html"
             >Web<span class="header-nav-logo-studio">Studio</span>
           </a>
+          <button 
+          class="open-menu menu-toggle js-open-menu" 
+          type="button"  
+          aria-expanded="false"
+          aria-controls="mobile-menu">
+            <svg class="menu-icon" width="30" height="19">
+              <use href="./images/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
           <ul class="list list-header">
             <li class="header-nav-item">
               <a class="nav-link current link" href="./index.html">Studio</a>
@@ -61,14 +71,16 @@
 
     <main>
       <!--Hero image Section 1-->
-      <section class="hero">
+      
+      <!-- <section class="hero">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
           <button class="btn hero-order-btn" type="button" data-modal-open>Order Service</button>
         </div>
-      </section>
+      </section> -->
 
       <!--Section 2-->
+      <!--
       <section class="feature">
         <div class="container">
           <h2 class="visually-hidden">text</h2>
@@ -129,6 +141,7 @@
       </section>
 
       <!--Section 3-->
+      <!--
       <section class="work">
         <div class="container">
           <h2 class="work-title">What are we doing</h2>
@@ -144,11 +157,11 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section>-->
 
       <!--Section 4-->
-      <section class="team">
-        <div class="container">
+      <!-- <section class="team">
+        <div class="container team-container">
           <h2 class="team-title">Our Team</h2>
           <ul class="list team-list">
             <li class="team-item">
@@ -313,9 +326,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
       <!--Section 5-->
+      <!--
       <section class="customers">
         <div class="container">
           <h2 class="customers-titel">Customers</h2>
@@ -365,9 +379,10 @@
           </ul>
         </div>
       </section>
-    </main>
+    </main>-->
 
     <!--Footer-->
+     <!--
     <footer class="footer" id="contacts">
       <div class="footer-container container">
         <div class="footer-title">
@@ -378,9 +393,10 @@
             Increase the flow of customers and sales for your business with digital marketing &
             growth solutions.
           </p>
-        </div>
+        </div>-->
 
         <!--Social media-->
+        <!--
         <div class="footer-social">
           <p class="social-paragraph">Social media</p>
           <ul class="social-list list">
@@ -413,8 +429,9 @@
               </a>
             </li>
           </ul>
-        </div>
+        </div>-->
         <!--Subscribe-->
+        <!--
         <div class="footer-subscribe">
           <p class="subscribe-paragraph">Subscribe</p>
           <form class="subscribe-form">
@@ -435,7 +452,7 @@
           </form>
         </div>
       </div>
-    </footer>
+    </footer>-->
 
     <!--Modal window-->
     <div class="backdrop is-hidden" data-modal>
@@ -519,6 +536,38 @@
       </div>
     </div>
 
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li><a href="" class="link">About</a></li>
+        <li><a href="" class="link">Products</a></li>
+        <li><a href="" class="link">Contacts</a></li>
+        <li><a href="" class="link">Career</a></li>
+      </ul>
+    </div>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

@@ -74,13 +74,33 @@ img {
   | Base styles
   |============================
 */
+/* Phone screen */
 .container {
-  width: 1158px;
+  min-width: 320px;
+  width: 428px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  outline: 2px solid red;
+  outline-offset: -2px;
 }
+/* Tablet screen */
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+/* Desktop screen */
+@media screen and (min-width: 1158px) {
+  .container {
+    width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 /**
   |============================
   | Card set
@@ -111,7 +131,7 @@ img {
   align-items: center;
 }
 .header-nav-logo-wed {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 800;
@@ -122,7 +142,7 @@ img {
 }
 
 .header-nav-logo-studio {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 800;
@@ -134,12 +154,18 @@ img {
 }
 
 .list-header {
-  display: flex;
-  gap: 40px;
+  display: none;
+  
+}
+@media screen and (min-width: 768px) {
+  .list-header {
+    display: flex;
+    gap: 40px;
+  }
 }
 
 .logo {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 800;
@@ -151,11 +177,21 @@ img {
   text-transform: uppercase;
   text-decoration: none;
 }
+
+.open-menu {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: auto;
+}
 .nav-link {
   padding-top: 24px;
   padding-bottom: 24px;
 
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -191,14 +227,19 @@ img {
 }
 
 .header-address {
-  margin-left: auto;
-  font-style: normal;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .header-addres {
+    margin-left: auto;
+    font-style: normal;
+  }
 }
 .address-link {
   padding-top: 24px;
   padding-bottom: 24px;
 
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -237,7 +278,7 @@ img {
   margin-bottom: 48px;
   text-align: center;
 
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 56px;
   font-style: normal;
   font-weight: 700;
@@ -246,7 +287,7 @@ img {
   color: var(--WHITE);
 }
 .btn {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 15px;
   font-style: normal;
   font-weight: 500;
@@ -304,7 +345,7 @@ img {
   background: var(--CLOUD);
 }
 .feature-item-titel {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -317,7 +358,7 @@ img {
   height: 24px;
 }
 .feature-item-paragraph {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -340,7 +381,7 @@ img {
   margin-bottom: 72px;
   text-align: center;
 
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: 700;
@@ -367,10 +408,24 @@ img {
   padding-bottom: 120px;
   background: var(--CLOUD);
 }
+.team-container {
+  min-width: 320px;
+  width: 428px;
+}
+@media screen and (min-width: 768px) {
+  .team-container {
+    min-width: 584px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .team-container {
+    min-width: 1158px;
+  }
+}
 .team-title {
   margin-bottom: 72px;
 
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: 700;
@@ -385,11 +440,21 @@ img {
   gap: 24px;
 }
 .team-item {
+  width: 100%;
   border-radius: 0px 0px 4px 4px;
-  width: calc((100% - 72px) / 4);
   background: var(--WHITE);
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+@media screen and (min-width: 768px) {
+  .tem-item {
+    width: calc((100% - 24px) / 2);
+  }
+}
+@media screen and (min-width: 1158px) {
+  .tem-item {
+    width: calc((100% - 72px) / 4);
+  }
 }
 .team-title-paragraph {
   padding: 32px 0;
@@ -397,7 +462,7 @@ img {
 .team-item-title {
   margin-bottom: 8px;
 
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -460,7 +525,7 @@ img {
 .customers-titel {
   margin-bottom: 72px;
 
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: 700;
@@ -528,7 +593,7 @@ img {
 .filters-item {
 }
 .filters-item-button {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -591,7 +656,7 @@ img {
   overflow: hidden;
 }
 .overlay-text {
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -625,7 +690,7 @@ img {
     0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .row-item-titel {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -636,7 +701,7 @@ img {
   margin-bottom: 8px;
 }
 .row-item-paragraph {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -665,7 +730,7 @@ img {
   height: 112px;
 }
 .footer-link {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 800;
@@ -678,7 +743,7 @@ img {
   text-transform: uppercase;
 }
 .footer-logo-studio {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 800;
@@ -689,7 +754,7 @@ img {
   text-transform: uppercase;
 }
 .footer-paragraph {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -706,7 +771,7 @@ img {
   height: 80px;
 }
 .social-paragraph {
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -749,7 +814,7 @@ img {
   height: 80px;
 }
 .subscribe-paragraph {
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -786,7 +851,7 @@ img {
   justify-content: center;
   align-items: center;
 
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -801,7 +866,6 @@ img {
   border-radius: 4px;
 }
 .footer-sub-icon {
-
 }
 /**
   |============================
@@ -887,7 +951,7 @@ img {
 }
 
 .modal-title {
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -904,7 +968,7 @@ img {
   margin-right: 24px;
 }
 .footer-sub-label {
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -937,7 +1001,7 @@ img {
   border: none;
   cursor: pointer;
 
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -954,7 +1018,7 @@ img {
   margin-bottom: 8px;
 }
 .modal-label {
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -1006,7 +1070,7 @@ img {
   height: 120px;
   padding: 8px 16px;
 
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -1032,7 +1096,7 @@ img {
 .modal-form-ladel-checkbox {
   display: block;
 
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -1056,7 +1120,7 @@ img {
     border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-link {
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -1090,7 +1154,7 @@ img {
   border: none;
   cursor: pointer;
 
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -1101,4 +1165,33 @@ img {
   text-align: center;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/**
+  |============================
+  | Mobile menu
+  |============================
+*/
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-color: #3f51b5;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #fff;
 }
