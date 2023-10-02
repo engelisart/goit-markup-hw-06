@@ -890,16 +890,16 @@ img {
   flex-wrap: wrap;
   row-gap: 72px;
   column-gap: 24px;
-  justify-content: center;
+  flex-direction: column;
 }
 @media screen and (min-width: 768px) {
   .footer-container {
-    
+    flex-direction: column;
   }
 }
 @media screen and (min-width: 1158px) {
   .footer-container {
-    /* align-items: baseline; */
+    align-items: baseline;
   }
 }
 
@@ -1184,8 +1184,8 @@ img {
   color: var(--WHITE);
 }
 .footer-sub-input {
-  width: 264px;
-  height: 40px;
+  /* width: 264px;
+  height: 40px; */
 
   border-radius: 4px;
   border: 1px solid var(--WHITE);
