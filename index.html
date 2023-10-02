@@ -167,11 +167,14 @@
           <ul class="list team-list">
             <li class="team-item">
               <img
-              srcset="./images/images-section4/mark-guerreroimg.jpg, 
-              ./images/images-section4/mark-guerrero-img-img_mob@2x.jpg"
+                srcset="
+                ./images/images-section4/mark-guerreroimg.jpg 1x, 
+                ./images/images-section4/mark-guerrero-img-img_mob@2x.jpg 2x
+                "
                 src="./images/images-section4/mark-guerreroimg.jpg"
                 alt="Product Designer"
                 width="264"
+                loading="lazy"
               />
               <div class="team-title-paragraph">
                 <h3 class="team-item-title">Mark Guerrero</h3>
@@ -210,9 +213,14 @@
             </li>
             <li class="team-item">
               <img
+              srcset="
+              ./images/images-section4/tom-fordimg.jpg 1x, 
+              ./images/images-section4/tom-img_mob@2x.jpg 2x
+              "
                 src="./images/images-section4/tom-fordimg.jpg"
                 alt="Frontend Developer"
                 width="264"
+                loading="lazy"
               />
               <div class="team-title-paragraph">
                 <h3 class="team-item-title">Tom Ford</h3>
@@ -250,7 +258,16 @@
               </div>
             </li>
             <li class="team-item">
-              <img src="./images/images-section4/camila-garcia.jpg" alt="Marketing" width="264" />
+              <img 
+              srcset="
+              ./images/images-section4/camila-garcia.jpg 1x, 
+              ./images/images-section4/camila-garcia-img_mob@2x.jpg 2x
+              "
+              src="./images/images-section4/camila-garcia.jpg" 
+              alt="Marketing" 
+              width="264"
+              loading="lazy"
+              />
               <div class="team-title-paragraph">
                 <h3 class="team-item-title">Camila Garcia</h3>
                 <p class="team-item-paragraph">Marketing</p>
@@ -288,9 +305,14 @@
             </li>
             <li class="team-item">
               <img
+              srcset="
+              ./images/images-section4/daniel-wisonimg.jpg 1x, 
+              ./images/images-section4/daniel-wisonimg-img_mob@2x.jpg 2x
+              "
                 src="./images/images-section4/daniel-wisonimg.jpg"
                 alt="UI Designer"
                 width="264"
+                loading="lazy"
               />
               <div class="team-title-paragraph">
                 <h3 class="team-item-title">Daniel Wilson</h3>
@@ -385,7 +407,7 @@
     </main>
 
     <!--Footer-->
-    
+
     <footer class="footer" id="contacts">
       <div class="footer-container container">
         <div class="footer-title">
@@ -398,8 +420,8 @@
           </p>
         </div>
 
-    <!--Social media-->
-    
+        <!--Social media-->
+
         <div class="footer-social">
           <p class="social-paragraph">Social media</p>
           <ul class="social-list list">
@@ -434,17 +456,18 @@
           </ul>
         </div>
 
-    <!--Subscribe-->
+        <!--Subscribe-->
         <div class="footer-subscribe">
           <p class="subscribe-paragraph">Subscribe</p>
           <form class="subscribe-form">
             <label class="footer-sub-label" for="user-email-sub">
-              <input 
-              class="footer-sub-input" 
-              type="email" 
-              id="user-email-sub" 
-              name="user-email" 
-              placeholder="E-mail">
+              <input
+                class="footer-sub-input"
+                type="email"
+                id="user-email-sub"
+                name="user-email"
+                placeholder="E-mail"
+              />
             </label>
             <button class="footer-btn-sub" type="submit">
               Subscribe
